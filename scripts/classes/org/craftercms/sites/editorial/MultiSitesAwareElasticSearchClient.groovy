@@ -10,6 +10,7 @@ class MultiSitesAwareElasticSearchClient extends AbstractElasticsearchClientWrap
     public MultiSitesAwareElasticSearchClient(ElasticsearchClient client) {
         super(client)
         println "init method"
+        println client
     }
     @Override
     protected void updateIndex(SearchRequest request, Map<String, Object> parameters, RequestUpdates updates) {
