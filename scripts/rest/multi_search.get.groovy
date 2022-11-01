@@ -2,6 +2,7 @@ import co.elastic.clients.elasticsearch.core.SearchRequest
 
 def multiSitesAwareElasticsearchClient = applicationContext.multiSitesAwareElasticsearchClient
 
+println applicationContext
 println multiSitesAwareElasticsearchClient
 
 
