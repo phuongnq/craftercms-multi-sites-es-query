@@ -17,16 +17,12 @@ SearchRequest request = SearchRequest.of(r -> r
             )
         )
       )
-    //   .from(0)
-    //   .size(10)
-    //   .index(indexes.join(','))
+      .from(0)
+      .size(10)
+      .index(indexes.join(','))
 )
 
 def result = elasticsearchClient.search(request, Map)
-
-println request
-
-println result
 
 return processUserSearchResults(result)
 
