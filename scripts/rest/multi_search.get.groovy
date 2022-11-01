@@ -23,7 +23,7 @@ SearchRequest request = SearchRequest.of(r -> r
 )
 
 def parameters = [
-    index: null
+    index: ''
 ]
 
 def result = elasticsearchClient.search(request, Map, parameters)
