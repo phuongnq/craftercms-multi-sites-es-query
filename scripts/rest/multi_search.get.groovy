@@ -19,10 +19,13 @@ SearchRequest request = SearchRequest.of(r -> r
       )
       .from(0)
       .size(10)
-      .index(indexes.join(','))
 )
 
-def result = elasticsearchClient.search(request, Map)
+def parameters = [
+    index: indexes.join(',')    
+]
+
+def result = elasticsearchClient.search(request, parameters)
 
 return processUserSearchResults(result)
 
