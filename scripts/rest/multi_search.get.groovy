@@ -1,6 +1,6 @@
 import co.elastic.clients.elasticsearch.core.SearchRequest
 
-def test = applicationContext.Test
+def test = applicationContext.test
 
 return test.search()
 
