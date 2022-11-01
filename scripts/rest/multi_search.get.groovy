@@ -1,6 +1,6 @@
 import co.elastic.clients.elasticsearch.core.SearchRequest
 
-def test = applicationContext.test
+def test = applicationContext.multiSitesAwareElasticSearchClient
 
 return test.search()
 
