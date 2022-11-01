@@ -14,6 +14,6 @@ class MultiSitesAwareElasticSearchClient extends AbstractElasticsearchClientWrap
     }
     
     def search() {
-        return "aaa"
+        return "bbbb"
     }
 }
