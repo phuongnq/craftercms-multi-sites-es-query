@@ -2,8 +2,6 @@ import co.elastic.clients.elasticsearch.core.SearchRequest
 
 def multiSitesAwareElasticSearchClient = applicationContext.multiSitesAwareElasticSearchClient
 
-return multiSitesAwareElasticSearchClient.search()
-
 def ARTICLE_CONTENT_TYPE = '/page/article'
 
 def sites = ['editorial-b', 'editorial-c', 'editorial-d']
