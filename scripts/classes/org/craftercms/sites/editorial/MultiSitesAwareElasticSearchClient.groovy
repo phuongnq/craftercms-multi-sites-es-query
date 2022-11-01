@@ -6,7 +6,7 @@ import co.elastic.clients.elasticsearch.ElasticsearchClient
 import java.beans.ConstructorProperties
 
 class MultiSitesAwareElasticSearchClient extends AbstractElasticsearchClientWrapper {
-    @ConstructorProperties({"client"})
+    @ConstructorProperties(["client"])
     public MultiSitesAwareElasticSearchClient(ElasticsearchClient client) {
         super(client)
     }
