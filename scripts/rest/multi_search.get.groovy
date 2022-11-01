@@ -1,7 +1,5 @@
 import co.elastic.clients.elasticsearch.core.SearchRequest
 
-import org.craftercms.sites.editorial.MultiSitesAwareElasticsearchClient
-
 def multiSitesAwareElasticsearchClient = applicationContext.multiSitesAwareElasticsearchClient
 
 
