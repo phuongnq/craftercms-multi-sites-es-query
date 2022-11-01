@@ -1,5 +1,5 @@
 import co.elastic.clients.elasticsearch.core.SearchRequest
-import org.craftercms.search.elasticsearch.impl.client.AbstractElasticsearchClientWrapper
+
 
 
 def ARTICLE_CONTENT_TYPE = '/page/article'
