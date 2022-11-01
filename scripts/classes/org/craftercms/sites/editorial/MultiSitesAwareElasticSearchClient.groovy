@@ -17,6 +17,10 @@ class MultiSitesAwareElasticSearchClient extends AbstractElasticsearchClientWrap
     @Override
     protected void updateIndex(SearchRequest request, Map<String, Object> parameters, RequestUpdates updates) {
         super.updateIndex(request, parameters, updates)
+        
+        List<String> currentIndices = updates.getIndex();
+        
+        println currentIndices
     }
     
     @Override
