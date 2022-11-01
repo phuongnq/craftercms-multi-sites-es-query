@@ -7,8 +7,6 @@ def ARTICLE_CONTENT_TYPE = '/page/article'
 def sites = ['editorial-b', 'editorial-c', 'editorial-d']
 def indexes = sites.collect { modePreview ? "${it}-preview" : it }
 
-println modePreview
-
 SearchRequest request = SearchRequest.of(r -> r
       .query(q -> q
         .match(m -> m
@@ -25,7 +23,6 @@ SearchRequest request = SearchRequest.of(r -> r
 
 
 def result = multiSitesAwareElasticSearchClient.search(request, Map)
-// def result = elasticsearchClient.search(request, Map)
 
 return processUserSearchResults(result)
 
