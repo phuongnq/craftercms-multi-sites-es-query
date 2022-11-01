@@ -5,7 +5,7 @@ package org.craftercms.sites.editorial
 // import co.elastic.clients.elasticsearch.ElasticsearchClient
 // import java.beans.ConstructorProperties
 
-public class MultiSitesAwareElasticSearchClient {
+class Test {
     def search() {
         return "aaa"
     }
