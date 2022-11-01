@@ -11,6 +11,8 @@ def ARTICLE_CONTENT_TYPE = '/page/article'
 def sites = ['editorial-b', 'editorial-c', 'editorial-d']
 def indexes = sites.collect { "${it}-authoring_v1" }
 
+return applicationContext.test.print()
+
 println indexes.join(',')
 
 SearchRequest request = SearchRequest.of(r -> r
