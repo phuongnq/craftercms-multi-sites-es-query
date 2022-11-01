@@ -1,10 +1,15 @@
 import co.elastic.clients.elasticsearch.core.SearchRequest
+import org.craftercms.engine.service.context.SiteContext
+
+def sites = params["sites[]"] ? params["sites[]"] : [SiteContext.getCurrent().getSiteName()]
+def start = params.start ? params.start as Integer : 0
+def rows = params.rows ? params.rows as Integer : 10
 
 def multiSitesAwareElasticSearchClient = applicationContext.multiSitesAwareElasticSearchClient
 
 def ARTICLE_CONTENT_TYPE = '/page/article'
 
-def sites = ['editorial-b', 'editorial-c', 'editorial-d']
+// def sites = ['editorial-b', 'editorial-c', 'editorial-d']
 def indexes = sites.collect { modePreview ? "${it}-preview" : it }
 
 SearchRequest request = SearchRequest.of(r -> r
@@ -16,8 +21,8 @@ SearchRequest request = SearchRequest.of(r -> r
             )
         )
       )
-      .from(0)
-      .size(10)
+      .from(start)
+      .size(rows)
       .index(indexes.join(','))
 )
 
