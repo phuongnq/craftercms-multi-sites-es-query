@@ -6,21 +6,14 @@ import co.elastic.clients.elasticsearch.ElasticsearchClient
 import java.beans.ConstructorProperties
 
 class MultiSitesAwareElasticSearchClient extends AbstractElasticsearchClientWrapper {
-    protected String indexIdFormat
-    
-    @ConstructorProperties(["client", "indexIdFormat"])
-    public MultiSitesAwareElasticSearchClient(ElasticsearchClient client, String indexIdFormat) {
+    @ConstructorProperties(["client"])
+    public MultiSitesAwareElasticSearchClient(ElasticsearchClient client) {
         super(client)
-        this.indexIdFormat = indexIdFormat
     }
     
     @Override
     protected void updateIndex(SearchRequest request, Map<String, Object> parameters, RequestUpdates updates) {
         super.updateIndex(request, parameters, updates)
-        
-        List<String> currentIndices = updates.getIndex();
-        
-        println currentIndices
     }
     
     @Override
