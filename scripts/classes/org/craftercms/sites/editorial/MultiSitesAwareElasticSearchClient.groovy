@@ -21,6 +21,5 @@ class MultiSitesAwareElasticSearchClient extends AbstractElasticsearchClientWrap
     @Override
     protected void updateQuery(SearchRequest request, Map<String, Object> parameters, RequestUpdates updates) {
         super.updateQuery(request, parameters, updates)
-        
     }
 }
