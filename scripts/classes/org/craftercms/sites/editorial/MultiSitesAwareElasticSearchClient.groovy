@@ -9,15 +9,14 @@ class MultiSitesAwareElasticSearchClient extends AbstractElasticsearchClientWrap
     protected String indexIdFormat
     
     @ConstructorProperties(["client", "indexIdFormat"])
-    public MultiSitesAwareElasticSearchClient(ElasticsearchClient client) {
+    public MultiSitesAwareElasticSearchClient(ElasticsearchClient client, String indexIdFormat) {
         super(client)
-        println "init method"
-        println client
+        this.indexIdFormat = indexIdFormat
     }
     
     @Override
     protected void updateIndex(SearchRequest request, Map<String, Object> parameters, RequestUpdates updates) {
-        super.updateIndex(request, parameters, updates)   
+        super.updateIndex(request, parameters, updates)
     }
     
     @Override
