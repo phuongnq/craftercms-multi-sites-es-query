@@ -35,4 +35,7 @@
             </bean>
         </constructor-arg>
     </bean>
+    <bean id="test" class="org.craftercms.sites.editorial.Test">
+        
+    </bean>
 </beans>
