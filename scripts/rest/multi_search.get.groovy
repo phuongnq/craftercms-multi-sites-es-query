@@ -35,7 +35,7 @@ private def processUserSearchResults(result) {
       hits.each {hit ->
         def doc = hit.source()
         def article = [:]
-            article.index = hit._index
+            article.index = hit.index()
             article.id = doc.objectId
             article.objectId = doc.objectId
             article.path = doc.localId
