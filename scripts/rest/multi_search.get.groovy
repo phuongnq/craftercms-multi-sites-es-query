@@ -19,7 +19,7 @@ SearchRequest request = SearchRequest.of(r -> r
       )
       .from(0)
       .size(10)
-      .index(indexes.join(','))
+    //   .index(indexes.join(','))
 )
 
 def result = elasticsearchClient.search(request, Map)
