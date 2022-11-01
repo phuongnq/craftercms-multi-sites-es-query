@@ -6,7 +6,6 @@ import co.elastic.clients.elasticsearch.ElasticsearchClient
 import java.beans.ConstructorProperties
 
 public class MultiSitesAwareElasticSearchClient {
-    @ConstructorProperties(["client"])
     public MultiSitesAwareElasticSearchClient(ElasticsearchClient client) {
         println "init method"
         println client
