@@ -8,6 +8,8 @@ def indexes = sites.collect { "${it}-authoring_v1" }
 
 println indexes.join(',')
 
+return indexes.join(',')
+
 SearchRequest request = SearchRequest.of(r -> r
       .query(q -> q
         .match(m -> m
