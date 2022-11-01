@@ -26,7 +26,7 @@ def parameters = [
     index: ''
 ]
 
-def result = elasticsearchClient.search(request, Map, parameters)
+def result = elasticsearchClient.search(request, Map)
 
 return processUserSearchResults(result)
 
