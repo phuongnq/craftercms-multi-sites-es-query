@@ -9,6 +9,7 @@ class MultiSitesAwareElasticSearchClient extends AbstractElasticsearchClientWrap
     @ConstructorProperties(["client"])
     public MultiSitesAwareElasticSearchClient(ElasticsearchClient client) {
         super(client)
+        println "init method"
     }
     @Override
     protected void updateIndex(SearchRequest request, Map<String, Object> parameters, RequestUpdates updates) {
