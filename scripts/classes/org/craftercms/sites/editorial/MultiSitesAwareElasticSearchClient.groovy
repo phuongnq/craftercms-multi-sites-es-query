@@ -11,15 +11,7 @@ public class MultiSitesAwareElasticSearchClient {
         println "init method"
         println client
     }
-    
-    @Override
-    protected void updateIndex(SearchRequest request, Map<String, Object> parameters, RequestUpdates updates) {
-        super.updateIndex(request, parameters, updates)   
-    }
-    
-    @Override
-    protected void updateQuery(SearchRequest request, Map<String, Object> parameters, RequestUpdates updates) {
-        super.updateQuery(request, parameters, updates)
-        
+    def search() {
+        return "aaa"
     }
 }
