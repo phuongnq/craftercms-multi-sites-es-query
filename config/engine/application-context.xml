@@ -34,5 +34,6 @@
                 <property name="socketKeepAlive" value="false"/>
             </bean>
         </constructor-arg>
+        <constructor-arg name="indexIdFormat" value="%s"/>
     </bean>
 </beans>
