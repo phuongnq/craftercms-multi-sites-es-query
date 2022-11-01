@@ -22,7 +22,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="test" class="org.craftercms.sites.editorial.Test">
+    <bean id="test" class="org.craftercms.sites.editorial.MultiSitesAwareElasticSearchClient">
         <!--<constructor-arg name="client">-->
         <!--    <bean class="org.craftercms.search.elasticsearch.spring.ElasticsearchClientFactory">-->
         <!--        <constructor-arg name="serverUrls" value="http://localhost:9201"/>-->
