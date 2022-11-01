@@ -5,7 +5,9 @@ def multiSitesAwareElasticSearchClient = applicationContext.multiSitesAwareElast
 def ARTICLE_CONTENT_TYPE = '/page/article'
 
 def sites = ['editorial-b', 'editorial-c', 'editorial-d']
-def indexes = sites.collect { "${it}-authoring_v1" }
+def indexes = sites.collect { modePreview ? "${it}-preview" : it }
+
+println modePreview
 
 SearchRequest request = SearchRequest.of(r -> r
       .query(q -> q
@@ -22,8 +24,8 @@ SearchRequest request = SearchRequest.of(r -> r
 )
 
 
-// def result = multiSitesAwareElasticSearchClient.search(request, Map)
-def result = elasticsearchClient.search(request, Map)
+def result = multiSitesAwareElasticSearchClient.search(request, Map)
+// def result = elasticsearchClient.search(request, Map)
 
 return processUserSearchResults(result)
 
