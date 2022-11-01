@@ -22,7 +22,8 @@ SearchRequest request = SearchRequest.of(r -> r
 )
 
 
-def result = multiSitesAwareElasticSearchClient.search(request, Map)
+// def result = multiSitesAwareElasticSearchClient.search(request, Map)
+def result = elasticsearchClient.search(request, Map)
 
 return processUserSearchResults(result)
 
