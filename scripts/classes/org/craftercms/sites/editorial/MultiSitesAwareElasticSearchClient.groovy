@@ -13,7 +13,14 @@ class MultiSitesAwareElasticSearchClient extends AbstractElasticsearchClientWrap
         println client
     }
     
-    def search() {
-        return "bbbb"
+    @Override
+    protected void updateIndex(SearchRequest request, Map<String, Object> parameters, RequestUpdates updates) {
+        super.updateIndex(request, parameters, updates)   
+    }
+    
+    @Override
+    protected void updateQuery(SearchRequest request, Map<String, Object> parameters, RequestUpdates updates) {
+        super.updateQuery(request, parameters, updates)
+        
     }
 }
