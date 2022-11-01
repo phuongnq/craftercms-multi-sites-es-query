@@ -1,7 +1,7 @@
 import co.elastic.clients.elasticsearch.core.SearchRequest
 import org.craftercms.engine.service.context.SiteContext
 
-def sites = params["sites[]"] ? params["sites[]"] : [SiteContext.getCurrent().getSiteName()]
+def sites = params["sites"] ? params["sites"] : [SiteContext.getCurrent().getSiteName()]
 def start = params.start ? params.start as Integer : 0
 def rows = params.rows ? params.rows as Integer : 10
 
