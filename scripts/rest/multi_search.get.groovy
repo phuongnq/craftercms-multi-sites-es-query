@@ -9,7 +9,6 @@ def multiSitesAwareElasticSearchClient = applicationContext.multiSitesAwareElast
 
 def ARTICLE_CONTENT_TYPE = '/page/article'
 
-// def sites = ['editorial-b', 'editorial-c', 'editorial-d']
 def indexes = sites.collect { modePreview ? "${it}-preview" : it }
 
 SearchRequest request = SearchRequest.of(r -> r
