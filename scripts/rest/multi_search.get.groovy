@@ -1,8 +1,8 @@
 import co.elastic.clients.elasticsearch.core.SearchRequest
 
-def test = applicationContext.multiSitesAwareElasticSearchClient
+def multiSitesAwareElasticSearchClient = applicationContext.multiSitesAwareElasticSearchClient
 
-return test.search()
+return multiSitesAwareElasticSearchClient.search()
 
 def ARTICLE_CONTENT_TYPE = '/page/article'
 
