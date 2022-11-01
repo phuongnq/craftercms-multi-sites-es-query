@@ -23,17 +23,17 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="multiSitesAwareElasticSearchClient" class="org.craftercms.sites.editorial.MultiSitesAwareElasticSearchClient">
-        <constructor-arg name="client">
-            <bean class="org.craftercms.search.elasticsearch.spring.ElasticsearchClientFactory">
-                <constructor-arg name="serverUrls" value="http://localhost:9201"/>
-                <property name="username" value=""/>
-                <property name="password" value=""/>
-                <property name="connectTimeout" value="-1"/>
-                <property name="socketTimeout" value="-1"/>
-                <property name="threadCount" value="-1"/>
-                <property name="socketKeepAlive" value="false"/>
-            </bean>
-        </constructor-arg>
+        <!--<constructor-arg name="client">-->
+        <!--    <bean class="org.craftercms.search.elasticsearch.spring.ElasticsearchClientFactory">-->
+        <!--        <constructor-arg name="serverUrls" value="http://localhost:9201"/>-->
+        <!--        <property name="username" value=""/>-->
+        <!--        <property name="password" value=""/>-->
+        <!--        <property name="connectTimeout" value="-1"/>-->
+        <!--        <property name="socketTimeout" value="-1"/>-->
+        <!--        <property name="threadCount" value="-1"/>-->
+        <!--        <property name="socketKeepAlive" value="false"/>-->
+        <!--    </bean>-->
+        <!--</constructor-arg>-->
     </bean>
     <bean id="test" class="org.craftercms.sites.editorial.Test">
         
