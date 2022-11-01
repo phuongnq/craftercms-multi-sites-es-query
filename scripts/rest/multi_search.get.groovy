@@ -24,9 +24,6 @@ SearchRequest request = SearchRequest.of(r -> r
       .index(indexes.join(','))
 )
 
-def parameters = [
-    index: ''
-]
 
 def result = multiSitesAwareElasticsearchClient.search(request, Map)
 
