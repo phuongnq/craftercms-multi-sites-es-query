@@ -5,7 +5,7 @@ import co.elastic.clients.elasticsearch.core.SearchRequest
 import co.elastic.clients.elasticsearch.ElasticsearchClient
 import java.beans.ConstructorProperties
 
-class MultiSitesAwareElasticSearchClient {
+class MultiSitesAwareElasticSearchClient extends AbstractElasticsearchClientWrapper {
     def search() {
         return "aaa"
     }
