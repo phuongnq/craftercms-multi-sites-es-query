@@ -1,3 +1,5 @@
+package org.craftercms.sites.editorial
+
 import org.craftercms.search.elasticsearch.impl.client.AbstractElasticsearchClientWrapper
 
 class MultiSitesAwareElasticSearchClient extends AbstractElasticsearchClientWrapper {
