@@ -1,5 +1,8 @@
 import co.elastic.clients.elasticsearch.core.SearchRequest
 
+import org.craftercms.sites.editorial.MultiSitesAwareElasticsearchClient
+
+def multiSitesAwareElasticsearchClient = applicationContext.multiSitesAwareElasticsearchClient
 
 
 def ARTICLE_CONTENT_TYPE = '/page/article'
@@ -27,7 +30,7 @@ def parameters = [
     index: ''
 ]
 
-def result = elasticsearchClient.search(request, Map)
+def result = multiSitesAwareElasticsearchClient.search(request, Map)
 
 return processUserSearchResults(result)
 
