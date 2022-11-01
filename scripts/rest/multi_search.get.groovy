@@ -24,4 +24,8 @@ SearchRequest request = SearchRequest.of(r -> r
 
 def result = elasticsearchClient.search(request, Map)
 
+println request
+
+println result
+
 return result
